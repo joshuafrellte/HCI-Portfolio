@@ -1,3 +1,7 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
 interface SectionHeaderProps {
   id?: string;
   title: string;
@@ -14,34 +18,51 @@ export default function SectionHeader({
   light = false,
 }: SectionHeaderProps) {
   return (
-    <header className={index ? "flex gap-4 sm:gap-6" : undefined}>
-      {index && (
-        <span
-          className="shrink-0 font-sans text-sm font-medium tabular-nums text-archivum-red"
-          aria-hidden="true"
-        >
-          {index}
-        </span>
-      )}
-      <div>
-        <h2
+    <motion.header
+      className="flex flex-col items-start text-left"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6 }}
+    >
+      <div className="w-full">
+        {index && (
+          <motion.span
+            className="text-sm font-bold uppercase tracking-widest text-neon-magenta mb-3 block"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            {index}
+          </motion.span>
+        )}
+        <motion.h2
           id={id}
-          className={`font-serif text-3xl font-semibold sm:text-4xl ${
-            light ? "text-snow" : "text-deep-space-blue"
+          className={`font-serif text-4xl font-bold sm:text-5xl ${
+            light ? "text-neon-cyan" : "text-neon-cyan"
           }`}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.1 }}
         >
           {title}
-        </h2>
+        </motion.h2>
         {description && (
-          <p
-            className={`mt-1 max-w-2xl text-base ${
-              light ? "text-snow/80" : "text-neutral-600"
+          <motion.p
+            className={`mt-4 max-w-2xl text-base ${
+              light ? "text-neutral-300" : "text-neutral-300"
             }`}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
             {description}
-          </p>
+          </motion.p>
         )}
       </div>
-    </header>
+    </motion.header>
   );
 }

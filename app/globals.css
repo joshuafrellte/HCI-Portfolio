@@ -1,29 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap');
+
 @import "tailwindcss";
 
-/* ─── Archivum design tokens ─── */
+/* ─── Cyberpunk design tokens ─── */
 :root {
-  --background: #f0ecec;
-  --foreground: #2e2a2b;
-  --card: #ffffff;
-  --border: #a3a3a3;
+  --background: #0a0e27;
+  --foreground: #e0e0ff;
+  --card: #0f1535;
+  --border: #2a4a7c;
   --radius: 0.625rem;
 
-  /* Brand */
-  --oxford-blue: #2c3e6b;
-  --deep-space-blue: #1f2b4b;
-  --velvet-wine: #9b4455;
-  --eerie-black: #2e2a2b;
-  --anti-flash-white: #f0ecec;
-  --snow: #faf8f8;
-  --old-gold: #c5a84b;
-  --deep-sea-green: #49766c;
-  --archivum-red: #c23a46;
-  --french-rose: #f06880;
-  --malachite: #5ed86d;
-  --malachite-dark: #4cbd5c;
-  --crimson-red: #ec1e24;
-  --footer-border: #e5dfdf;
-  --nav-ivory: #fefbf5;
+  /* Cyberpunk Brand Colors */
+  --neon-cyan: #00d9ff;
+  --neon-magenta: #ff006e;
+  --neon-green: #39ff14;
+  --neon-pink: #ff10f0;
+  --electric-blue: #0080ff;
+  --dark-purple: #1a0933;
+  --dark-cyan: #001a33;
+  --cyber-gray: #1a1a2e;
+  --light-text: #e0e0ff;
+  --dim-text: #9090c0;
+  
+  /* Legacy colors mapped to cyberpunk */
+  --oxford-blue: #0080ff;
+  --deep-space-blue: #001a4d;
+  --velvet-wine: #ff10f0;
+  --eerie-black: #0a0e27;
+  --anti-flash-white: #e0e0ff;
+  --snow: #f0f0ff;
+  --old-gold: #ffd700;
+  --deep-sea-green: #39ff14;
+  --archivum-red: #ff006e;
+  --french-rose: #ff10f0;
+  --malachite: #39ff14;
+  --malachite-dark: #00ff00;
+  --crimson-red: #ff006e;
+  --footer-border: #2a4a7c;
+  --nav-ivory: #e0e0ff;
 }
 
 @theme inline {
@@ -32,45 +46,55 @@
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-border: var(--border);
+  
+  /* Cyberpunk neon colors - CORE */
+  --color-neon-cyan: #00d9ff;
+  --color-neon-magenta: #ff006e;
+  --color-neon-green: #39ff14;
+  --color-neon-pink: #ff10f0;
+  --color-electric-blue: #0080ff;
+  --color-dark-purple: #1a0933;
+  --color-dark-cyan: #001a33;
+  --color-cyber-gray: #1a1a2e;
 
-  --color-oxford-blue: #2c3e6b;
-  --color-deep-space-blue: #1f2b4b;
-  --color-velvet-wine: #9b4455;
-  --color-eerie-black: #2e2a2b;
-  --color-anti-flash-white: #f0ecec;
-  --color-snow: #faf8f8;
-  --color-old-gold: #c5a84b;
-  --color-deep-sea-green: #49766c;
-  --color-archivum-red: #c23a46;
-  --color-french-rose: #f06880;
-  --color-malachite: #5ed86d;
-  --color-malachite-dark: #4cbd5c;
-  --color-crimson-red: #ec1e24;
-  --color-coordinator-cream: #f0ecec;
-  --color-coordinator-ink: #2e2a2b;
-  --color-coordinator-navy: #2c3e6b;
-  --color-coordinator-rose: #9b4455;
-  --color-footer-border: #e5dfdf;
-  --color-nav-ivory: #fefbf5;
+  --color-oxford-blue: #0080ff;
+  --color-deep-space-blue: #001a4d;
+  --color-velvet-wine: #ff10f0;
+  --color-eerie-black: #0a0e27;
+  --color-anti-flash-white: #e0e0ff;
+  --color-snow: #f0f0ff;
+  --color-old-gold: #ffd700;
+  --color-deep-sea-green: #39ff14;
+  --color-archivum-red: #ff006e;
+  --color-french-rose: #ff10f0;
+  --color-malachite: #39ff14;
+  --color-malachite-dark: #00ff00;
+  --color-crimson-red: #ff006e;
+  --color-coordinator-cream: #e0e0ff;
+  --color-coordinator-ink: #e0e0ff;
+  --color-coordinator-navy: #0080ff;
+  --color-coordinator-rose: #ff10f0;
+  --color-footer-border: #2a4a7c;
+  --color-nav-ivory: #e0e0ff;
 
-  --color-neutral-50: #faf8f8;
-  --color-neutral-100: #f5f5f5;
-  --color-neutral-200: #e5e5e5;
-  --color-neutral-300: #d5d5d5;
-  --color-neutral-400: #a3a3a3;
-  --color-neutral-500: #737373;
-  --color-neutral-600: #525252;
-  --color-neutral-800: #262626;
-  --color-neutral-900: #171717;
+  --color-neutral-50: #f0f0ff;
+  --color-neutral-100: #e0e0ff;
+  --color-neutral-200: #9090c0;
+  --color-neutral-300: #6060a0;
+  --color-neutral-400: #404080;
+  --color-neutral-500: #303060;
+  --color-neutral-600: #202040;
+  --color-neutral-800: #101020;
+  --color-neutral-900: #0a0e27;
 
-  --color-warning: #f59e0b;
+  --color-warning: #ffd700;
 
-  /* Typography */
-  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
-  --font-serif: var(--font-dm-serif-text), Georgia, serif;
-  --font-mono: var(--font-fira-code), ui-monospace, monospace;
+  /* Typography - Cyberpunk fonts */
+  --font-sans: 'Space Mono', monospace;
+  --font-serif: 'Orbitron', sans-serif;
+  --font-mono: 'Space Mono', monospace;
 
-  /* Archivum boxy radius scale */
+  /* Cyberpunk radius scale - more angular */
   --radius-sm: 0.125rem;
   --radius-md: 0.1875rem;
   --radius-lg: 0.25rem;
@@ -84,20 +108,17 @@
   --spacing-112: 28rem;
   --spacing-128: 32rem;
 
-  /* Shadows */
-  --shadow-archivum-sm: 0 1px 3px rgba(0, 0, 0, 0.08),
-    0 1px 2px -1px rgba(0, 0, 0, 0.06);
-  --shadow-archivum-md: 0 4px 10px -1px rgba(0, 0, 0, 0.12),
-    0 2px 6px -2px rgba(0, 0, 0, 0.08);
-  --shadow-archivum-lg: 0 10px 22px -3px rgba(0, 0, 0, 0.14),
-    0 4px 10px -4px rgba(0, 0, 0, 0.08);
-  --shadow-archivum-soft: 0 2px 15px rgba(0, 0, 0, 0.11);
-  --shadow-archivum-medium: 0 4px 25px rgba(0, 0, 0, 0.15);
-  --shadow-archivum-hard: 0 10px 40px rgba(0, 0, 0, 0.19);
-  --shadow-primary-glow: 0 4px 12px rgba(44, 62, 107, 0.2);
-  --shadow-error-glow: 0 4px 12px rgba(194, 58, 70, 0.2);
-  --shadow-success-glow: 0 4px 12px rgba(73, 118, 108, 0.2);
-  --shadow-nav: 0 1px 6px rgba(0, 0, 0, 0.28);
+  /* Cyberpunk neon shadows and glows */
+  --shadow-archivum-sm: 0 0 8px rgba(0, 217, 255, 0.1);
+  --shadow-archivum-md: 0 0 20px rgba(0, 217, 255, 0.15);
+  --shadow-archivum-lg: 0 0 40px rgba(0, 217, 255, 0.2);
+  --shadow-archivum-soft: 0 0 15px rgba(255, 16, 240, 0.1);
+  --shadow-archivum-medium: 0 0 30px rgba(255, 16, 240, 0.15);
+  --shadow-archivum-hard: 0 0 50px rgba(0, 217, 255, 0.25);
+  --shadow-primary-glow: 0 0 20px rgba(0, 128, 255, 0.4);
+  --shadow-error-glow: 0 0 20px rgba(255, 0, 110, 0.4);
+  --shadow-success-glow: 0 0 20px rgba(57, 255, 20, 0.4);
+  --shadow-nav: 0 0 30px rgba(0, 217, 255, 0.2);
 
   /* Type scale line heights */
   --text-xs--line-height: 1rem;
@@ -127,15 +148,15 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  font-family: 'Space Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Scrollbars */
+/* Scrollbars - cyberpunk neon */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #d5d5d5 #f5f5f5;
+  scrollbar-color: #00d9ff #0f1535;
 }
 
 *::-webkit-scrollbar {
@@ -144,21 +165,24 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background: #f5f5f5;
+  background: #0f1535;
 }
 
 *::-webkit-scrollbar-thumb {
-  background: #d5d5d5;
-  border-radius: 9999px;
+  background: #00d9ff;
+  border-radius: 0;
+  box-shadow: 0 0 8px rgba(0, 217, 255, 0.5);
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: #a3a3a3;
+  background: #ff10f0;
+  box-shadow: 0 0 12px rgba(255, 16, 240, 0.6);
 }
 
 /* Section layout utility */
 .section-container {
-  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  @apply mx-auto px-4 sm:px-6 lg:px-8;
+  max-width: min(100%, 1728px);
 }
 
 .section-padding {
@@ -169,7 +193,72 @@ body {
   @apply py-16 sm:py-20 lg:py-24;
 }
 
-/* Chip / badge */
+/* Chip / badge - cyberpunk neon */
 .archivum-chip {
-  @apply inline-block rounded-sm border border-neutral-300 bg-neutral-100 px-2.5 py-1 text-sm font-medium text-coordinator-ink;
+  @apply inline-block border border-neon-cyan bg-[#1a0933] px-2.5 py-1 text-sm font-medium text-neon-cyan;
+}
+
+/* Cyberpunk neon glows and effects */
+@layer utilities {
+  .glow-cyan {
+    @apply shadow-lg;
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.3), inset 0 0 20px rgba(0, 217, 255, 0.1);
+  }
+
+  .glow-magenta {
+    @apply shadow-lg;
+    box-shadow: 0 0 20px rgba(255, 16, 240, 0.3), inset 0 0 20px rgba(255, 16, 240, 0.1);
+  }
+
+  .glow-neon-green {
+    @apply shadow-lg;
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.3), inset 0 0 20px rgba(57, 255, 20, 0.1);
+  }
+
+  .border-glow-cyan {
+    border-color: #00d9ff;
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.5), inset 0 0 10px rgba(0, 217, 255, 0.1);
+  }
+
+  .border-glow-magenta {
+    border-color: #ff10f0;
+    box-shadow: 0 0 10px rgba(255, 16, 240, 0.5), inset 0 0 10px rgba(255, 16, 240, 0.1);
+  }
+
+  .text-glow-cyan {
+    color: #00d9ff;
+    text-shadow: 0 0 10px rgba(0, 217, 255, 0.5), 0 0 20px rgba(0, 217, 255, 0.3);
+  }
+
+  .text-glow-magenta {
+    color: #ff10f0;
+    text-shadow: 0 0 10px rgba(255, 16, 240, 0.5), 0 0 20px rgba(255, 16, 240, 0.3);
+  }
+
+  .text-glow-neon-green {
+    color: #39ff14;
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5), 0 0 20px rgba(57, 255, 20, 0.3);
+  }
+}
+
+/* Cyberpunk grid background pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 217, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 217, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure content is above grid */
+html > * {
+  position: relative;
+  z-index: 1;
 }

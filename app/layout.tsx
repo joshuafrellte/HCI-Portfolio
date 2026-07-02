@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { DM_Sans, DM_Serif_Text } from "next/font/google";
-import { Fira_Code } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -17,11 +16,6 @@ const dmSerifText = DM_Serif_Text({
   style: ["normal", "italic"],
 });
 
-const firaCode = Fira_Code({
-  variable: "--font-fira-code",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
   title: "[Your Name] | Academic E-Portfolio",
   description:
@@ -34,10 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${dmSans.variable} ${dmSerifText.variable} ${firaCode.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${dmSans.variable} ${dmSerifText.variable} h-full antialiased`}>
       <body className="min-h-full bg-coordinator-cream font-sans text-coordinator-ink">
         <Nav />
         <main>{children}</main>

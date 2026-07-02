@@ -1,11 +1,36 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import Card from "@/components/ui/Card";
 import SectionHeader from "@/components/ui/SectionHeader";
 
 const facts = [
   { label: "School", value: "Mapúa Malayan Colleges Mindanao" },
-  { label: "Year Level", value: "[Placeholder — e.g., 3rd Year]" },
-  { label: "Focus Area", value: "[Placeholder — e.g., HCI & Web Development]" },
+  { label: "Year Level", value: "2nd Year" },
+  { label: "Focus Area", value: "HCI & Web Development" },
 ];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+    },
+  },
+};
 
 export default function About() {
   return (
@@ -21,46 +46,63 @@ export default function About() {
         description="Background, academic focus, and the work I am building toward."
       />
 
-      <div className="mt-12 grid gap-6 lg:grid-cols-[1fr_280px] lg:gap-8">
-        <Card className="p-4 sm:p-6">
-          <div className="space-y-5 text-base leading-relaxed text-neutral-600">
-            <p>
-              [Placeholder paragraph 1] I am a Computer Science student with a
-              growing interest in human-computer interaction, software design,
-              and building tools that feel intuitive to use.
-            </p>
-            <p>
-              [Placeholder paragraph 2] Through coursework and personal projects,
-              I have explored front-end development, user research methods, and
-              iterative prototyping — always with an eye toward clarity and
-              accessibility.
-            </p>
-            <p>
-              [Placeholder paragraph 3] I am currently looking for opportunities
-              to collaborate on meaningful projects, internships, and research
-              that bridge technical skill with user-centered thinking.
-            </p>
-          </div>
-        </Card>
+      <motion.div
+        className="mt-12 grid gap-6 lg:grid-cols-[1fr_280px] lg:gap-8"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
+        <motion.div variants={itemVariants}>
+          <Card className="p-4 sm:p-6 border-neon-magenta/50 hover:border-neon-magenta/100">
+            <div className="space-y-5 text-base leading-relaxed text-neutral-300">
+              <p>
+                [Placeholder paragraph 1] I am a Computer Science student with a
+                growing interest in human-computer interaction, software design,
+                and building tools that feel intuitive to use.
+              </p>
+              <p>
+                [Placeholder paragraph 2] Through coursework and personal projects,
+                I have explored front-end development, user research methods, and
+                iterative prototyping — always with an eye toward clarity and
+                accessibility.
+              </p>
+              <p>
+                [Placeholder paragraph 3] I am currently looking for opportunities
+                to collaborate on meaningful projects, internships, and research
+                that bridge technical skill with user-centered thinking.
+              </p>
+            </div>
+          </Card>
+        </motion.div>
 
-        <aside aria-label="Quick facts">
-          <Card className="h-fit p-4 sm:p-6">
-            <h3 className="border-b border-neutral-300 pb-4 font-sans text-sm font-semibold uppercase tracking-wider text-neutral-500">
+        <motion.aside
+          aria-label="Quick facts"
+          variants={itemVariants}
+        >
+          <Card className="h-fit p-4 sm:p-6 border-neon-cyan/50 hover:border-neon-green/70">
+            <h3 className="border-b border-neon-cyan/30 pb-4 font-sans text-sm font-bold uppercase tracking-wider text-neon-magenta">
               At a glance
             </h3>
             <dl className="mt-4 space-y-4">
               {facts.map(({ label, value }) => (
-                <div key={label}>
-                  <dt className="text-sm text-neutral-500">{label}</dt>
-                  <dd className="mt-0.5 font-medium text-eerie-black">
+                <motion.div
+                  key={label}
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4 }}
+                >
+                  <dt className="text-sm text-neutral-400">{label}</dt>
+                  <dd className="mt-0.5 font-bold text-neon-cyan">
                     {value}
                   </dd>
-                </div>
+                </motion.div>
               ))}
             </dl>
           </Card>
-        </aside>
-      </div>
+        </motion.aside>
+      </motion.div>
     </section>
   );
 }

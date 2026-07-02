@@ -1,4 +1,5 @@
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
+import { motion } from "framer-motion";
 
 type ButtonVariant =
   | "primary"
@@ -7,8 +8,9 @@ type ButtonVariant =
   | "ghost"
   | "success"
   | "error"
-  | "inverted"
-  | "outlineLight";
+  | "neon-cyan"
+  | "neon-magenta"
+  | "neon-green";
 
 type ButtonSize = "sm" | "md" | "lg";
 
@@ -29,21 +31,23 @@ type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "border-2 border-transparent bg-oxford-blue text-white hover:bg-oxford-blue/90 hover:shadow-primary-glow focus-visible:ring-oxford-blue/30",
+    "border border-electric-blue text-electric-blue hover:text-white bg-transparent hover:bg-electric-blue/20 hover:shadow-primary-glow focus-visible:ring-electric-blue/30",
   outline:
-    "border-2 border-oxford-blue text-oxford-blue hover:bg-oxford-blue hover:text-white focus-visible:ring-oxford-blue/30",
+    "border border-neon-cyan text-neon-cyan hover:bg-neon-cyan/20 hover:shadow-[0_0_20px_rgba(0,217,255,0.4)] focus-visible:ring-neon-cyan/30",
   secondary:
-    "border-2 border-transparent bg-neutral-200 text-neutral-900 hover:bg-neutral-300 focus-visible:ring-neutral-400/40",
+    "border border-neutral-400 bg-[#1a0933]/40 text-neutral-200 hover:bg-[#1a0933]/60 hover:border-neutral-300 focus-visible:ring-neutral-400/40",
   ghost:
-    "border-2 border-transparent text-oxford-blue hover:bg-neutral-100 focus-visible:ring-oxford-blue/30",
+    "border-transparent text-neon-cyan hover:text-neon-magenta hover:bg-neon-cyan/5 focus-visible:ring-neon-cyan/30",
   success:
-    "border-2 border-transparent bg-deep-sea-green text-white hover:bg-deep-sea-green/90 hover:shadow-success-glow focus-visible:ring-deep-sea-green/30",
+    "border border-neon-green text-neon-green hover:bg-neon-green/20 hover:shadow-[0_0_20px_rgba(57,255,20,0.4)] focus-visible:ring-neon-green/30",
   error:
-    "border-2 border-transparent bg-archivum-red text-white hover:bg-archivum-red/90 hover:shadow-error-glow focus-visible:ring-archivum-red/30",
-  inverted:
-    "border-2 border-snow bg-snow text-oxford-blue hover:bg-neutral-100 focus-visible:ring-snow/40",
-  outlineLight:
-    "border-2 border-snow text-snow hover:bg-snow/10 focus-visible:ring-snow/40",
+    "border border-neon-magenta text-neon-magenta hover:bg-neon-magenta/20 hover:shadow-[0_0_20px_rgba(255,0,110,0.4)] focus-visible:ring-neon-magenta/30",
+  "neon-cyan":
+    "border border-neon-cyan text-neon-cyan hover:bg-neon-cyan/20 hover:shadow-[0_0_20px_rgba(0,217,255,0.4)] focus-visible:ring-neon-cyan/30",
+  "neon-magenta":
+    "border border-neon-magenta text-neon-magenta hover:bg-neon-magenta/20 hover:shadow-[0_0_20px_rgba(255,16,240,0.4)] focus-visible:ring-neon-magenta/30",
+  "neon-green":
+    "border border-neon-green text-neon-green hover:bg-neon-green/20 hover:shadow-[0_0_20px_rgba(57,255,20,0.4)] focus-visible:ring-neon-green/30",
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
@@ -59,21 +63,33 @@ export default function Button({
   children,
   ...props
 }: ButtonProps) {
-  const classes = `inline-flex items-center justify-center rounded-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 disabled:cursor-not-allowed disabled:opacity-60 ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  const baseClasses = `inline-flex items-center justify-center font-bold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 disabled:cursor-not-allowed disabled:opacity-60 uppercase tracking-wider ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
   if ("href" in props && props.href) {
-    const { href, ...linkProps } = props;
+    const { href, onClick } = props;
     return (
-      <a href={href} className={classes} {...linkProps}>
+      <motion.a
+        href={href}
+        onClick={onClick as any}
+        className={baseClasses}
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
+      >
         {children}
-      </a>
+      </motion.a>
     );
   }
 
-  const buttonProps = props as ButtonHTMLAttributes<HTMLButtonElement>;
+  const { onClick } = props as ButtonHTMLAttributes<HTMLButtonElement>;
   return (
-    <button type="button" className={classes} {...buttonProps}>
+    <motion.button
+      type="button"
+      onClick={onClick}
+      className={baseClasses}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+    >
       {children}
-    </button>
+    </motion.button>
   );
 }

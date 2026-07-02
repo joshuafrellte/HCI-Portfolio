@@ -7,21 +7,30 @@ export interface Project {
   techStack: string[];
   link: string;
   featured?: boolean;
+  screenshotLabels?: string[];
+  screenshotImages?: string[];
 }
 
 export const projects: Project[] = [
   {
-    id: "flagship-project",
-    title: "[Placeholder] Flagship Academic Project",
+    id: "archivum",
+    title: "Archivum",
     description:
-      "A capstone-style project demonstrating full-stack development, user research, and iterative design.",
+      "A research project management platform that centralizes student-adviser collaboration, project tracking, and defense scheduling.",
     problem:
-      "Students struggled to track coursework deadlines across multiple platforms with no unified view.",
+      "Academic teams lacked a single place to manage project milestones, advisor reviews, and defense logistics.",
     solution:
-      "Built a centralized dashboard with calendar sync, smart reminders, and a mobile-first interface.",
-    techStack: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
-    link: "https://github.com/yourusername/flagship-project",
+      "Built a centralized portal with progress dashboards, version history, team communication, and defense planning tools.",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    link: "https://archivum-portal.duckdns.org/",
     featured: true,
+    screenshotLabels: ["Dashboard view", "History view", "Defense scheduling", "Project details"],
+    screenshotImages: [
+      "/archivum-dashboard.png",
+      "/archivum-history.png",
+      "/archivum-defense-scheduling.png",
+      "/archivum-project.png",
+    ],
   },
   {
     id: "project-two",
