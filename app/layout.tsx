@@ -17,9 +17,12 @@ const dmSerifText = DM_Serif_Text({
 });
 
 export const metadata: Metadata = {
-  title: "[Your Name] | Academic E-Portfolio",
+  title: "Joshua Te | Academic E-Portfolio",
   description:
-    "Personal academic e-portfolio — BS Computer Science student at Mapúa Malayan Colleges Mindanao.",
+    "Personal academic e-portfolio : BS Computer Science student at Mapúa Malayan Colleges Mindanao.",
+  icons: {
+    icon: "/p"
+  }
 };
 
 export default function RootLayout({
