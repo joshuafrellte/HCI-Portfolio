@@ -41,7 +41,7 @@ export default function About() {
     >
       <SectionHeader
         id="about-heading"
-        index="01"
+        index="04"
         title="About"
         description="Background, academic focus, and the work I am building toward."
       />
@@ -55,20 +55,19 @@ export default function About() {
       >
         <motion.div variants={itemVariants}>
           <Card className="p-4 sm:p-6 border-neon-magenta/50 hover:border-neon-magenta/100">
-            <div className="space-y-5 text-base leading-relaxed text-neutral-300">
+            <div className="space-y-5 text-base leading-relaxed text-neutral-200">
               <p>
-                [Placeholder paragraph 1] I am a Computer Science student with a
-                growing interest in human-computer interaction, software design,
-                and building tools that feel intuitive to use.
+                I am a Computer Science student with an interest in full stack web development, 
+                UI/UX design, and machine learning. Looking forward, I would also love to dive into
+                the fields of cybersecurity, artificial intelligence, and electronics.
               </p>
               <p>
-                [Placeholder paragraph 2] Through coursework and personal projects,
-                I have explored front-end development, user research methods, and
+                Through coursework and personal projects, I have explored front-end development, user research methods, and
                 iterative prototyping — always with an eye toward clarity and
                 accessibility.
               </p>
               <p>
-                [Placeholder paragraph 3] I am currently looking for opportunities
+                I am currently looking for opportunities
                 to collaborate on meaningful projects, internships, and research
                 that bridge technical skill with user-centered thinking.
               </p>
@@ -93,7 +92,7 @@ export default function About() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4 }}
                 >
-                  <dt className="text-sm text-neutral-400">{label}</dt>
+                  <dt className="text-sm text-neutral-300">{label}</dt>
                   <dd className="mt-0.5 font-bold text-neon-cyan">
                     {value}
                   </dd>

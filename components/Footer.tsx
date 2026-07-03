@@ -103,7 +103,7 @@ export default function Footer() {
           </motion.p>
           <motion.p
             variants={itemVariants}
-            className="mx-auto mt-4 max-w-xl text-base text-neutral-300"
+            className="mx-auto mt-4 max-w-xl text-base text-neutral-200"
           >
             Whether you have a project in mind or want to discuss HCI, software
             design, or academic work — I&apos;d like to hear from you.
@@ -168,7 +168,7 @@ export default function Footer() {
                     <span className="block text-xs font-bold uppercase tracking-wider text-neon-magenta group-hover:text-neon-cyan transition-colors">
                       {label}
                     </span>
-                    <span className="mt-0.5 block text-sm text-neutral-400 group-hover:text-neon-cyan transition-colors group-hover:underline group-hover:underline-offset-4">
+                    <span className="mt-0.5 block text-sm text-neutral-300 group-hover:text-neon-cyan transition-colors group-hover:underline group-hover:underline-offset-4">
                       {display}
                     </span>
                   </span>

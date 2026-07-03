@@ -36,7 +36,7 @@ export default function Skills() {
     >
       <SectionHeader
         id="skills-heading"
-        index="02"
+        index="03"
         title="Skills & Tech Stack"
         description="Technologies and competencies developed through coursework, projects, and self-directed learning."
       />

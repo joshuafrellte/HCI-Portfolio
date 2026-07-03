@@ -18,10 +18,10 @@ export default function ProjectCard({
     return (
       <div className="space-y-6">
         <Card className="p-6 sm:p-8">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-3">
             <div className="flex items-center justify-between gap-3">
-              <span className="text-sm font-medium tabular-nums text-archivum-red">
-                Flagship
+              <span className="text-sm font-medium tabular-nums text-neon-magenta">
+                Final Project
               </span>
               <a
                 href={project.link}
@@ -35,10 +35,13 @@ export default function ProjectCard({
             </div>
 
             <div>
-              <h3 className="font-serif text-3xl font-semibold text-neon-cyan">
+              <h3 
+                className="font-serif text-3xl font-semibold text-neon-yellow" 
+                style={{ textShadow: "0 0 2px rgba(255, 211, 0, 1), 0 0 1px rgba(255, 211, 0, 1)" }}
+              >
                 {project.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-neutral-300">
+              <p className="mt-3 text-sm leading-relaxed text-neutral-200">
                 {project.description}
               </p>
             </div>
@@ -46,11 +49,11 @@ export default function ProjectCard({
             <div className="grid gap-3 border-t border-neutral-300 pt-4 text-sm sm:grid-cols-2 sm:gap-4">
               <div>
                 <p className="font-medium text-neon-cyan">Problem</p>
-                <p className="mt-1 text-neutral-300">{project.problem}</p>
+                <p className="mt-1 text-neutral-200">{project.problem}</p>
               </div>
               <div>
                 <p className="font-medium text-neon-cyan">Solution</p>
-                <p className="mt-1 text-neutral-300">{project.solution}</p>
+                <p className="mt-1 text-neutral-200">{project.solution}</p>
               </div>
             </div>
 
@@ -84,7 +87,7 @@ export default function ProjectCard({
                   className="object-cover transition duration-300 hover:scale-105"
                 />
                 {project.screenshotLabels?.[index] && (
-                  <div className="absolute inset-x-0 bottom-0 bg-black/60 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-100">
+                  <div className="absolute inset-x-0 bottom-0 bg-black/60 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-200">
                     {project.screenshotLabels[index]}
                   </div>
                 )}
@@ -97,11 +100,11 @@ export default function ProjectCard({
   }
 
   return (
-    <Card
+   <Card
       interactive
-      className={`flex flex-col ${featured ? "p-6 sm:p-8" : "p-4 sm:p-6"}`}
+      className={`h-[300px] flex flex-col ${featured ? "p-6 sm:p-8" : "p-4 sm:p-6"}`}
     >
-      <div className={`flex flex-col gap-4 ${featured ? "lg:gap-6" : ""}`}>
+      <div className={`flex flex-1 flex-col gap-4 ${featured ? "lg:gap-6" : ""}`}>
         {featured && (
           <span className="text-sm font-medium tabular-nums text-archivum-red">
             Flagship
@@ -116,20 +119,9 @@ export default function ProjectCard({
           >
             {project.title}
           </h3>
-          <p className="mt-2 text-sm leading-relaxed text-neutral-300">
+          <p className="mt-2 text-sm leading-relaxed text-neutral-200">
             {project.description}
           </p>
-        </div>
-
-        <div className="grid gap-3 border-t border-neutral-300 pt-4 text-sm sm:grid-cols-2 sm:gap-4">
-          <div>
-            <p className="font-medium text-neon-cyan">Problem</p>
-            <p className="mt-1 text-neutral-300">{project.problem}</p>
-          </div>
-          <div>
-            <p className="font-medium text-neon-cyan">Solution</p>
-            <p className="mt-1 text-neutral-300">{project.solution}</p>
-          </div>
         </div>
 
         <ul className="flex flex-wrap gap-2" aria-label="Tech stack">
@@ -144,7 +136,7 @@ export default function ProjectCard({
           href={project.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-auto inline-flex w-fit items-center gap-1.5 text-sm font-medium text-oxford-blue transition-all duration-200 hover:text-deep-space-blue hover:underline hover:underline-offset-4"
+          className="mt-auto inline-flex w-fit items-center gap-1.5 text-sm font-medium text-neon-magenta transition-all duration-200 hover:text-deep-space-blue hover:underline hover:underline-offset-4"
         >
           View project
           <FiExternalLink className="h-3.5 w-3.5" aria-hidden="true" />

@@ -36,7 +36,7 @@ export default function Certificates() {
     >
       <SectionHeader
         id="certificates-heading"
-        index="04"
+        index="02"
         title="Certificates"
         description="Credentials and completed courses that complement my academic work."
       />

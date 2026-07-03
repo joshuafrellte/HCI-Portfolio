@@ -10,7 +10,11 @@ interface CertificateCardProps {
 }
 
 export default function CertificateCard({ certificate }: CertificateCardProps) {
-  const { title, issuer, date, imageUrl, link } = certificate;
+  const { id, title, issuer, date, imageUrl, link } = certificate;
+  const certificateTitleColor = id === "ccis-innovision" ? "text-neon-yellow" : 
+                                id === "coursera-input-interaction" ? "text-neon-yellow" :
+                                id === "coursera-ux-design" ? "text-neon-yellow" :
+                                "text-neon-cyan";
 
   return (
     <motion.div
@@ -19,7 +23,7 @@ export default function CertificateCard({ certificate }: CertificateCardProps) {
     >
       <Card
         interactive
-        className="flex flex-col overflow-hidden border-neon-green/50 hover:border-neon-magenta/70"
+        className="lg:h-[400px] xl:h-[470px] flex flex-col overflow-hidden border-neon-green/50 hover:border-neon-magenta/70"
       >
         <motion.div
           className="flex aspect-[4/3] items-center justify-center border-b border-neon-cyan/30 bg-gradient-to-br from-neon-green/5 to-neon-magenta/5"
@@ -38,7 +42,7 @@ export default function CertificateCard({ certificate }: CertificateCardProps) {
 
         <div className="flex flex-1 flex-col p-4 sm:p-6">
           <motion.h3
-            className="font-serif text-xl font-bold text-neon-cyan"
+            className={`font-serif text-xl font-bold ${certificateTitleColor}`}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -47,7 +51,7 @@ export default function CertificateCard({ certificate }: CertificateCardProps) {
             {title}
           </motion.h3>
           <motion.p
-            className="mt-2 text-sm text-neutral-300"
+            className="mt-2 text-sm text-neutral-200"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -56,7 +60,7 @@ export default function CertificateCard({ certificate }: CertificateCardProps) {
             {issuer}
           </motion.p>
           <motion.p
-            className="mt-1 text-sm text-neutral-400"
+            className="mt-1 text-sm text-neutral-300"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}

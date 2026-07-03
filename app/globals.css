@@ -13,6 +13,7 @@
   /* Cyberpunk Brand Colors */
   --neon-cyan: #00d9ff;
   --neon-magenta: #ff006e;
+  --neon-yellow: #ffd300;
   --neon-green: #39ff14;
   --neon-pink: #ff10f0;
   --electric-blue: #0080ff;
@@ -50,6 +51,7 @@
   /* Cyberpunk neon colors - CORE */
   --color-neon-cyan: #00d9ff;
   --color-neon-magenta: #ff006e;
+  --color-neon-yellow: #ffd300;
   --color-neon-green: #39ff14;
   --color-neon-pink: #ff10f0;
   --color-electric-blue: #0080ff;

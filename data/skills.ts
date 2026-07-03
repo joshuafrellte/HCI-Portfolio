@@ -10,7 +10,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     name: "Frameworks / Tools",
-    skills: ["Next.js", "React", "Node.js", "Tailwind CSS", "Git", "Figma"],
+    skills: ["Next.js", "React", "Node.js", "Tailwind CSS", "Express.js", "Git", "Figma"],
   },
   {
     name: "Databases",

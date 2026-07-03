@@ -52,7 +52,7 @@ export default function SectionHeader({
         {description && (
           <motion.p
             className={`mt-4 max-w-2xl text-base ${
-              light ? "text-neutral-300" : "text-neutral-300"
+              light ? "text-neutral-200" : "text-neutral-200"
             }`}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

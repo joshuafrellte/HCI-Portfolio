@@ -85,7 +85,7 @@ export default function Nav() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
           >
-            CYBER
+            apogee
           </motion.span>
         </motion.a>
 

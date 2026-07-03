@@ -59,7 +59,7 @@ export default function Projects() {
 
         {others.length > 0 && (
           <motion.div
-            className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3"
+            className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
