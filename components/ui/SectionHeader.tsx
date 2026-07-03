@@ -48,7 +48,7 @@ export default function SectionHeader({
           transition={{ duration: 0.6, delay: 0.1 } as never}
           style={{ textShadow: "0 0 10px rgba(0, 217, 255, 0.5), 0 0 20px rgba(0, 217, 255, 0.3)" }}
         >
-          {title}
+          {title}_
         </motion.h2>
         {description && (
           <motion.p

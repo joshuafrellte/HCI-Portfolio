@@ -42,7 +42,7 @@ export default function Interests() {
       <SectionHeader
         id="interests-heading"
         index="05"
-        title="Personal Database"
+        title="Outside of Coding"
         description="A few interests that continue to inspire the way I think, learn, and create."
       />
 
