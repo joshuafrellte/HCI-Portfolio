@@ -6,6 +6,8 @@ export interface Project {
   solution: string;
   techStack: string[];
   link: string;
+  docs?: string;
+  github?: string;
   featured?: boolean;
   screenshotLabels?: string[];
   screenshotImages?: string[];
@@ -24,13 +26,21 @@ export const projects: Project[] = [
     techStack: ["Next.js", "TypeScript", "Express.js", "MySQL", "Tailwind CSS", "FastAPI", "Python", "Docker", "DigitalOcean"],
     link: "https://archivum-portal.duckdns.org/",
     featured: true,
-    screenshotLabels: ["Dashboard view", "Document version history", "Defense scheduling", "Project lifecycle tracking"],
+    screenshotLabels: ["Dashboard view", "Document version history", "Defense scheduling", "Project lifecycle tracking", "Inline commenting", "Online meeting integration", "Event calendar", "RRL Cross-refencing"],
     screenshotImages: [
-      "/archivum-dashboard.png",
-      "/archivum-history.png",
-      "/archivum-defense-scheduling.png",
-      "/archivum-project.png",
+      "/final-project/archivum-dashboard.png",
+      "/final-project/archivum-history.png",
+      "/final-project/archivum-defense-scheduling.png",
+      "/final-project/archivum-project.png",
+      "/final-project/archivum-commenting.png",
+      "/final-project/archivum-meeting.png",
+      "/final-project/archivum-calendar.png",
+      "/final-project/archivum-cross-referencing.png",
     ],
+    docs:
+      "https://github.com/Very-Formal-Group-Dev-Team/research-pipeline-web/blob/staging/DOCS/USER_GUIDE.md",
+    github:
+      "https://github.com/Very-Formal-Group-Dev-Team/research-pipeline-web",
   },
   {
     id: "smashq",

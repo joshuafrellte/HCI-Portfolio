@@ -14,6 +14,7 @@ export const certificates: Certificate[] = [
     issuer: "Dean / College of Computer and Information Science",
     date: "June 2026",
     imageUrl: "/certificates/Te_Innovision_Certificate.jpg",
+    link: "https://malayancollegesmindanaoo365-my.sharepoint.com/:i:/g/personal/rjrizada_mcm_edu_ph/IQBTwyZ21kAhRI5KY7UT814oAaKuQQen72phIlYPKjpsmWs?e=p8YLBe",
   },
   {
     id: "coursera-input-interaction",
@@ -21,6 +22,7 @@ export const certificates: Certificate[] = [
     issuer: "Coursera / UC San Diego",
     date: "Apr 2026",
     imageUrl: "/certificates/Coursera Input and Interaction VD4TLDTL071L-1.png",
+    link: "https://coursera.org/share/1531f138538470f4efb90cd8e92e5a26",
   },
   {
     id: "coursera-ux-design",
@@ -28,6 +30,7 @@ export const certificates: Certificate[] = [
     issuer: "Coursera / Georgia Tech",
     date: "May 2026",
     imageUrl: "/certificates/Coursera Intro to UX Design OSGB0DBQZFHY-1.png",
+    link: "https://coursera.org/share/fd03b7120cd77b020849f56f758bfdf1",
   },
   {
     id: "coursera-csharp",
