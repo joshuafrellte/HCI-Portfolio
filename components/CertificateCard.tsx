@@ -9,13 +9,13 @@ interface CertificateCardProps {
   certificate: Certificate;
 }
 
+const featured = ["ccis-innovision", "coursera-input-interaction", "coursera-ux-design"]
+
 export default function CertificateCard({ certificate }: CertificateCardProps) {
   const { id, title, issuer, date, imageUrl, link } = certificate;
-  const certificateTitleColor = id === "ccis-innovision" ? "text-neon-yellow" : 
-                                id === "coursera-input-interaction" ? "text-neon-yellow" :
-                                id === "coursera-ux-design" ? "text-neon-yellow" :
-                                "text-neon-cyan";
-
+  const certificateTitleColor = featured.includes(id) ? "text-neon-yellow" : "text-neon-cyan";
+  // const featuredGlow = featured.includes(id) ? `textShadow: "0 0 3px rgba(255, 211, 0, 1), 0 0 2px rgba(255, 211, 0, 1)` : "";
+  
   return (
     <motion.div
       className="h-full"

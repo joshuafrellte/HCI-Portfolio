@@ -38,7 +38,7 @@ export default function ProjectCard({
             <div>
               <h3 
                 className="font-serif text-3xl font-semibold text-neon-yellow" 
-                style={{ textShadow: "0 0 2px rgba(255, 211, 0, 1), 0 0 1px rgba(255, 211, 0, 1)" }}
+                style={{ textShadow: "0 0 3px rgba(255, 211, 0, 1), 0 0 2px rgba(255, 211, 0, 1)" }}
               >
                 {project.title}
               </h3>
