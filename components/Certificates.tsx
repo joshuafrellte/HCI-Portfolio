@@ -122,7 +122,7 @@ export default function Certificates() {
           type="button"
           onClick={() => setExpanded(!expanded)}
           aria-expanded={expanded}
-          className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-neon-cyan transition-all duration-200 hover:text-neon-magenta"
+          className="cursor-pointer inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-neon-cyan transition-all duration-200 hover:text-neon-magenta"
         >
           {expanded ? "Show Less" : "Show More"}
           <motion.span

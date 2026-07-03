@@ -29,7 +29,7 @@ const itemVariants: Variants = {
   },
 };
 
-const VISIBLE_COUNT = 4;
+const VISIBLE_COUNT = 0;
 
 export default function Projects() {
   const [expanded, setExpanded] = useState(false);
@@ -109,7 +109,7 @@ export default function Projects() {
                 type="button"
                 onClick={() => setExpanded((prev) => !prev)}
                 aria-expanded={expanded}
-                className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-neon-cyan transition-all duration-200 hover:text-neon-magenta"
+                className="cursor-pointer inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-neon-cyan transition-all duration-200 hover:text-neon-magenta"
               >
                 {expanded ? "Show less" : "More projects"}
                 <motion.span

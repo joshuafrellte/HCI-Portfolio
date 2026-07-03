@@ -2,6 +2,7 @@
 
 import { motion, type Variants } from "framer-motion";;
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { AiOutlineMail } from "react-icons/ai";
 import Button from "@/components/ui/Button";
 
 const contactLinks = [
@@ -112,15 +113,21 @@ export default function Footer() {
             variants={itemVariants}
             className="mt-8 flex flex-wrap justify-center gap-3"
           >
-            <Button href="mailto:jfte@mcm.edu.ph" variant="neon-magenta" size="md">
-              Send an email
+            <Button 
+              href="mailto:jfte@mcm.edu.ph" 
+              variant="neon-magenta" 
+              size="md" 
+              className="flex gap-3"
+            >
+              <AiOutlineMail /> Send an email
             </Button>
             <Button
               href="www.linkedin.com/in/joshua-frell-te-70b343327/"
               variant="neon-cyan"
               size="md"
+              className="flex gap-3"
             >
-              LinkedIn profile
+              <FiLinkedin /> LinkedIn profile
             </Button>
           </motion.div>
         </motion.div>
