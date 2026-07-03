@@ -56,7 +56,7 @@ export default function About() {
         viewport={{ once: true, margin: "-100px" }}
       >
         <motion.div variants={itemVariants}>
-          <Card className="h-full p-4 sm:p-6 border-neon-magenta/50 hover:border-neon-magenta/100">
+          <Card className="h-full p-4 sm:p-6 border-neon-magenta/50 hover:border-neon-magenta/90 transition duration-150 hover:shadow-[0_0_12px_rgba(255,0,110,0.7)]">
             <div className="space-y-5 text-base leading-relaxed text-neutral-200">
               <p>
                 I am a Computer Science student with an interest in full stack web development, 
@@ -81,7 +81,7 @@ export default function About() {
           aria-label="Quick facts"
           variants={itemVariants}
         >
-          <Card className="h-fit p-4 sm:p-6 border-neon-cyan/50 hover:border-neon-green/70">
+          <Card className="h-fit p-4 sm:p-6 border-neon-cyan/50 hover:border-neon-cyan/80 transition duration-150 hover:shadow-[0_0_12px_rgba(0,255,255,0.7)]">
             <h3 className="border-b border-neon-cyan/30 pb-4 font-sans text-sm font-bold uppercase tracking-wider text-neon-magenta">
               TL;DR
             </h3>

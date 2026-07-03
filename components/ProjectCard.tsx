@@ -26,7 +26,7 @@ export default function ProjectCard({
     return (
       <div className="space-y-6">
         <div className="grid lg:grid-cols-[2.2fr_340px] gap-6">
-          <Card className="h-full p-6 sm:p-8">
+          <Card className="h-full p-6 sm:p-8 hover:border-neon-magenta/90 transition duration-150 hover:shadow-[0_0_12px_rgba(255,0,110,0.7)]">
             <div className="flex flex-col gap-6">
               <div className="flex items-center justify-between gap-3">
                 <span className="text-sm font-medium uppercase tracking-widest text-neon-magenta">
@@ -72,7 +72,7 @@ export default function ProjectCard({
             </div>
           </Card>
           {/* RIGHT CARD */}
-          <Card className="flex flex-col p-6">
+          <Card className="flex flex-col p-6 hover:border-neon-magenta/90 transition duration-150 hover:shadow-[0_0_12px_rgba(255,0,110,0.7)]">
             <div>
               <span className="text-sm font-medium uppercase tracking-widest text-neon-magenta">
                 Resources
@@ -152,7 +152,7 @@ export default function ProjectCard({
           </Card>
         </div>
 
-        <Card className="p-4 sm:p-5">
+        <Card className="p-4 sm:p-5 hover:border-neon-magenta/90 transition duration-150 hover:shadow-[0_0_12px_rgba(255,0,110,0.7)]">
           <div className="flex items-center gap-2.5 text-sm font-medium text-neon-cyan">
             <FiImage className="h-4 w-4 text-archivum-red" aria-hidden="true" />
             <span className="uppercase tracking-widest">Project screenshots</span>
@@ -172,7 +172,7 @@ export default function ProjectCard({
                   alt={`${project.title} screenshot ${index + 1}`}
                   fill
                   sizes="(max-width: 640px) 100vw, 25vw"
-                  className="object-cover transition duration-300 group-hover:scale-105"
+                  className="object-cover transition duration-300"
                 />
 
                 {project.screenshotLabels?.[index] && (

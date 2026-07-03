@@ -122,7 +122,7 @@ export default function Footer() {
               <AiOutlineMail /> Send an email
             </Button>
             <Button
-              href="www.linkedin.com/in/joshua-frell-te-70b343327/"
+              href="https://www.linkedin.com/in/joshua-frell-te-70b343327/"
               variant="neon-cyan"
               size="md"
               className="flex gap-3"
@@ -163,7 +163,7 @@ export default function Footer() {
                   whileHover={{ x: 4 }}
                 >
                   <motion.div
-                    whileHover={{ scale: 1.2, rotate: 10 }}
+                    whileHover={{ scale: 1.0, rotate: 10 }}
                     transition={{ duration: 0.2 } as never}
                   >
                     <Icon

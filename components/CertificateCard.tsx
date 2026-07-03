@@ -19,18 +19,18 @@ export default function CertificateCard({ certificate }: CertificateCardProps) {
   return (
     <motion.div
       className="h-full"
-      whileHover={{ scale: 1.02 }}
-      transition={{ duration: 0.3 } as never} 
+      whileHover={{ scale: 1.00 }}
+      transition={{ duration: 0.1 } as never} 
     >
       <Card
         interactive
-        className="h-full flex flex-col overflow-hidden border-neon-green/50 hover:border-neon-magenta/70"
+        className="h-full flex flex-col overflow-hidden border-neon-cyan/50 duration-150 hover:shadow-[0_0_12px_rgba(0,255,255,0.7)]"
       >
         <motion.div
           className="flex aspect-[4/3] items-center justify-center border-b border-neon-cyan/30 bg-gradient-to-br from-neon-green/5 to-neon-magenta/5"
           role="img"
           aria-label={`${title} certificate image placeholder`}
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.00 }}
           transition={{ duration: 0.4 } as never}
         >
           {imageUrl ? (

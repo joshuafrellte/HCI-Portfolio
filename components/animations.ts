@@ -108,7 +108,7 @@ export const imageScaleVariants: Variants = {
     scale: 1,
   },
   hover: {
-    scale: 1.05,
+    scale: 1.00,
     transition: {
       duration: 0.4,
     } as never,

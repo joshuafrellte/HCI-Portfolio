@@ -72,7 +72,7 @@ export default function Button({
         href={href}
         onClick={onClick as never}
         className={baseClasses}
-        whileHover={{ scale: 1.02 }}
+        whileHover={{ scale: 1.00 }}
         whileTap={{ scale: 0.98 }}
       >
         {children}
@@ -86,7 +86,7 @@ export default function Button({
       type="button"
       onClick={onClick}
       className={baseClasses}
-      whileHover={{ scale: 1.02 }}
+      whileHover={{ scale: 1.00 }}
       whileTap={{ scale: 0.98 }}
     >
       {children}

@@ -50,7 +50,7 @@ export default function Skills() {
       >
         {skillCategories.map(({ name, icon: Icon, skills }) => (
           <motion.div key={name} variants={itemVariants}>
-            <Card className="h-full p-4 sm:p-6 border-neon-magenta/50 hover:border-neon-green/70">
+            <Card className="h-full p-4 sm:p-6 transition-all border-neon-magenta/50 hover:border-neon-magenta/90 duration-150 hover:shadow-[0_0_12px_rgba(255,0,110,0.7)]">
               <div className="flex items-center gap-3">
                 <Icon
                   size={22}

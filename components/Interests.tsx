@@ -61,7 +61,7 @@ export default function Interests() {
               key={category.id}
               variants={itemVariants}
             >
-              <Card className="h-full border-neon-cyan/40 p-6 transition-colors hover:border-neon-magenta/80">
+              <Card className="h-full border-neon-cyan/40 p-6 transition-all hover:border-neon-cyan/80 duration-150 hover:shadow-[0_0_12px_rgba(0,255,255,0.7)]">
                 <div className="flex items-center gap-3 border-b border-neon-cyan/30 pb-4">
                   <Icon
                     size={20}
