@@ -7,7 +7,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 const facts = [
   { label: "School", value: "Mapúa Malayan Colleges Mindanao" },
   { label: "Year Level", value: "2nd Year" },
-  { label: "Focus Area", value: "HCI & Web Development" },
+  { label: "Focus Area", value: "Full Stack Web Development" },
 ];
 
 const containerVariants = {
@@ -47,14 +47,14 @@ export default function About() {
       />
 
       <motion.div
-        className="mt-12 grid gap-6 lg:grid-cols-[1fr_280px] lg:gap-8"
+        className="h-full mt-12 grid gap-6 lg:grid-cols-[1fr_280px] lg:gap-8"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
         <motion.div variants={itemVariants}>
-          <Card className="p-4 sm:p-6 border-neon-magenta/50 hover:border-neon-magenta/100">
+          <Card className="h-full p-4 sm:p-6 border-neon-magenta/50 hover:border-neon-magenta/100">
             <div className="space-y-5 text-base leading-relaxed text-neutral-200">
               <p>
                 I am a Computer Science student with an interest in full stack web development, 
@@ -62,14 +62,14 @@ export default function About() {
                 the fields of cybersecurity, artificial intelligence, and electronics.
               </p>
               <p>
-                Through coursework and personal projects, I have explored front-end development, user research methods, and
-                iterative prototyping — always with an eye toward clarity and
-                accessibility.
+                Through coursework and personal projects, I have developed a deep understanding 
+                and took control of my strengths and weaknesses to improve self-sufficiency,
+                collaboration skills, and my taste for human-centered designs.
               </p>
               <p>
-                I am currently looking for opportunities
-                to collaborate on meaningful projects, internships, and research
-                that bridge technical skill with user-centered thinking.
+                I am always looking for opportunities to collaborate on meaningful projects, 
+                internships, and research where I can bridge my technical skills
+                with empathetic, accessible, and most importantly, cool designs. 
               </p>
             </div>
           </Card>
@@ -81,7 +81,7 @@ export default function About() {
         >
           <Card className="h-fit p-4 sm:p-6 border-neon-cyan/50 hover:border-neon-green/70">
             <h3 className="border-b border-neon-cyan/30 pb-4 font-sans text-sm font-bold uppercase tracking-wider text-neon-magenta">
-              At a glance
+              TL;DR
             </h3>
             <dl className="mt-4 space-y-4">
               {facts.map(({ label, value }) => (

@@ -18,12 +18,13 @@ export default function CertificateCard({ certificate }: CertificateCardProps) {
 
   return (
     <motion.div
+      className="h-full"
       whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.3 }}
     >
       <Card
         interactive
-        className="lg:h-[400px] xl:h-[470px] flex flex-col overflow-hidden border-neon-green/50 hover:border-neon-magenta/70"
+        className="h-full flex flex-col overflow-hidden border-neon-green/50 hover:border-neon-magenta/70"
       >
         <motion.div
           className="flex aspect-[4/3] items-center justify-center border-b border-neon-cyan/30 bg-gradient-to-br from-neon-green/5 to-neon-magenta/5"

@@ -93,7 +93,7 @@ export default function Footer() {
             className="font-serif text-4xl font-bold text-neon-cyan sm:text-5xl"
             style={{ textShadow: "0 0 10px rgba(0, 217, 255, 0.5), 0 0 20px rgba(0, 217, 255, 0.3)" }}
           >
-            Let&apos;s Connect
+            Let's Connect
           </motion.h2>
           <motion.p
             variants={itemVariants}
@@ -105,8 +105,8 @@ export default function Footer() {
             variants={itemVariants}
             className="mx-auto mt-4 max-w-xl text-base text-neutral-200"
           >
-            Whether you have a project in mind or want to discuss HCI, software
-            design, or academic work — I&apos;d like to hear from you.
+            Whether you have a project in mind or want to full-stack web development, software
+            design, or academic work, I'd like to hear from you.
           </motion.p>
           <motion.div
             variants={itemVariants}
@@ -178,14 +178,14 @@ export default function Footer() {
           </motion.ul>
 
           <motion.p
-            className="mt-10 border-t border-neon-cyan/20 pt-6 text-xs text-neutral-500"
+            className="mt-10 border-t border-neon-cyan/20 pt-6 text-xs text-neutral-300"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             © {new Date().getFullYear()} Joshua Frell Te. Cyberpunk e-portfolio
-            — powered by Framer Motion, Embla, and neon dreams.
+            powered by Framer Motion, Embla, and neon dreams.
           </motion.p>
         </div>
       </motion.footer>

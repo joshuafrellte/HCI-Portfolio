@@ -45,6 +45,43 @@ export const projects: Project[] = [
     link: "https://smashq-murex.vercel.app/",
   },
   {
+    id: "mmcm-gwa-calculator",
+    title: "MMCM CS GWA Calculator",
+    description:
+      "A more developed GWA calculator supporting multiple terms (2Y-1T, 2Y-2T, 2Y-3T) with term-specific subject lists.",
+    problem:
+      "The earlier GWA calculator only covered one term, so it couldn't scale to a student's full academic year.",
+    solution:
+      "Built a term-selectable calculator that swaps in the correct subject list per term and computes GWA accordingly.",
+    techStack: ["Next.js", "TypeScript"],
+    link: "https://mmcm-cs-gwa-calculator.vercel.app/",
+  },
+  {
+    id: "pomodoro-timer",
+    title: "Pomodoro Timer",
+    description:
+      "A minimal study timer implementing the Pomodoro technique with start, pause, and reset controls.",
+    problem:
+      "Needed a distraction-free timer for practicing focused work intervals.",
+    solution:
+      "Built a clean circular timer UI with session controls and visual countdown feedback.",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    link: "https://pomodoro-timer-puce-seven.vercel.app/",
+  },
+  
+  {
+    id: "inventory-api",
+    title: "Simple Inventory API",
+    description:
+      "A simple inventory web API built with Express.js currenty in progress.",
+    problem:
+      "Coursework required building a functioning web app under exam time constraints.",
+    solution:
+      "Built a quote board interface with themed styling and grid-based quote cards.",
+    techStack: ["Node.js", "Express.js", "MySQL"],
+    link: "https://github.com/joshuafrellte/inventory-api-rework.git",
+  },
+  {
     id: "machine-problems",
     title: "Machine Problems",
     description:
@@ -81,18 +118,6 @@ export const projects: Project[] = [
     link: "https://joshuafrellte.github.io/InteractivePhotoGallery/gallery.html",
   },
   {
-    id: "pomodoro-timer",
-    title: "Pomodoro Timer",
-    description:
-      "A minimal study timer implementing the Pomodoro technique with start, pause, and reset controls.",
-    problem:
-      "Needed a distraction-free timer for practicing focused work intervals.",
-    solution:
-      "Built a clean circular timer UI with session controls and visual countdown feedback.",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    link: "https://pomodoro-timer-puce-seven.vercel.app/",
-  },
-  {
     id: "gwa-calculator",
     title: "GWA Calculator for CS 1Y 2T",
     description:
@@ -103,18 +128,6 @@ export const projects: Project[] = [
       "Built a form-based calculator that outputs the final GWA instantly from entered subject grades.",
     techStack: ["HTML", "CSS", "JavaScript"],
     link: "https://joshuafrellte.github.io/GWA-Calculator-for-MMCM-CS-2Y-1T/",
-  },
-  {
-    id: "mmcm-gwa-calculator",
-    title: "MMCM CS GWA Calculator",
-    description:
-      "A more developed GWA calculator supporting multiple terms (2Y-1T, 2Y-2T, 2Y-3T) with term-specific subject lists.",
-    problem:
-      "The earlier GWA calculator only covered one term, so it couldn't scale to a student's full academic year.",
-    solution:
-      "Built a term-selectable calculator that swaps in the correct subject list per term and computes GWA accordingly.",
-    techStack: ["Next.js", "TypeScript"],
-    link: "https://mmcm-cs-gwa-calculator.vercel.app/",
   },
   {
     id: "number-guessing-game",
@@ -199,18 +212,6 @@ export const projects: Project[] = [
       "Built a quote board interface with themed styling and grid-based quote cards.",
     techStack: ["Next.js", "TypeScript"],
     link: "https://it-103-m1-summative-exam-part-3.vercel.app/",
-  },
-  {
-    id: "inventory-api",
-    title: "Simple Inventory API",
-    description:
-      "A simple inventory web API built with Express.js currenty in progress.",
-    problem:
-      "Coursework required building a functioning web app under exam time constraints.",
-    solution:
-      "Built a quote board interface with themed styling and grid-based quote cards.",
-    techStack: ["Node.js", "Express.js", "MySQL"],
-    link: "https://github.com/joshuafrellte/inventory-api-rework.git",
   },
   {
     id: "teen-mental-health-model",

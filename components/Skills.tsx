@@ -50,7 +50,7 @@ export default function Skills() {
       >
         {skillCategories.map(({ name, skills }, index) => (
           <motion.div key={name} variants={itemVariants}>
-            <Card className="p-4 sm:p-6 border-neon-magenta/50 hover:border-neon-green/70">
+            <Card className="h-full p-4 sm:p-6 border-neon-magenta/50 hover:border-neon-green/70">
               <motion.span
                 className="text-sm font-bold uppercase tracking-widest text-neon-magenta tabular-nums"
                 aria-hidden="true"

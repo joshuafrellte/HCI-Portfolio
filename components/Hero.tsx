@@ -35,7 +35,7 @@ export default function Hero() {
     <section
       id="hero"
       aria-labelledby="hero-heading"
-      className="section-padding-hero section-container mt-24 flex min-h-[88vh] flex-col justify-center"
+      className="section-padding-hero section-container mt-12 flex min-h-[88vh] flex-col justify-center"
     >
       <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-16">
         <motion.div
@@ -185,7 +185,7 @@ export default function Hero() {
               fill
               sizes="384px"
               className="object-cover"
-              style={{ mixBlendMode: "screen", filter: "brightness(1.1) saturate(1.3) hue-rotate(160deg)", transform: "translate(-16px, 8px)" }}
+              style={{ mixBlendMode: "screen", filter: "brightness(0.9) saturate(1.3) hue-rotate(160deg)", transform: "translate(-24px, 8px)" }}
               aria-hidden="true"
             />
             <Image
@@ -193,7 +193,7 @@ export default function Hero() {
               alt=""
               fill
               sizes="384px"
-              className="object-cover opacity-90"
+              className="object-cover opacity-100"
             />
             <Image
               src="/profilepicforportfolio-removebg-preview.png"
@@ -201,14 +201,14 @@ export default function Hero() {
               fill
               sizes="384px"
               className="object-cover"
-              style={{ mixBlendMode: "screen", filter: "brightness(0.) saturate(2.5) hue-rotate(-20deg)", transform: "translate(16px, -8px)" }}
+              style={{ mixBlendMode: "screen", filter: "brightness(0.4) saturate(2.5) hue-rotate(-20deg)", transform: "translate(24px, -8px)" }}
               aria-hidden="true"
             />
           </div>
         </motion.div>
       </div>
 
-      <motion.dl
+      {/* <motion.dl
         className="mt-16 grid grid-cols-2 gap-4 border-t border-neon-cyan/30 pt-10 sm:grid-cols-4 sm:gap-6"
         initial="hidden"
         whileInView="visible"
@@ -223,11 +223,11 @@ export default function Hero() {
             </dd>
           </motion.div>
         ))}
-      </motion.dl>
+      </motion.dl> */}
 
       <motion.a
         href="#projects"
-        className="mt-12 inline-flex items-center gap-2 self-center text-sm font-bold text-neon-cyan transition-all duration-200 hover:text-neon-magenta uppercase tracking-widest lg:mt-16"
+        className="mt-16 inline-flex items-center gap-2 self-center text-sm font-bold text-neon-cyan transition-all duration-200 hover:text-neon-magenta uppercase tracking-widest lg:mt-32"
         aria-label="Scroll to Projects section"
         animate={{ y: [0, 6, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
