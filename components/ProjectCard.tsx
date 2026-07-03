@@ -160,23 +160,31 @@ export default function ProjectCard({
 
           <div className="mt-4 grid gap-3 sm:grid-cols-4">
             {project.screenshotImages!.map((src, index) => (
-              <div
+              <a
                 key={src}
-                className="relative overflow-hidden rounded-sm border border-neutral-700 bg-neutral-950/30 aspect-[16/9]"
+                href={src}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative block overflow-hidden rounded-sm border border-neutral-700 bg-neutral-950/30 aspect-[16/9]"
               >
                 <Image
                   src={src}
                   alt={`${project.title} screenshot ${index + 1}`}
                   fill
                   sizes="(max-width: 640px) 100vw, 25vw"
-                  className="object-cover transition duration-300 hover:scale-105"
+                  className="object-cover transition duration-300 group-hover:scale-105"
                 />
+
                 {project.screenshotLabels?.[index] && (
-                  <div className="absolute inset-x-0 bottom-0 bg-black/60 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-150">
+                  <div className="absolute inset-x-0 bottom-0 bg-black/60 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-200">
                     {project.screenshotLabels[index]}
                   </div>
                 )}
-              </div>
+
+                <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-all duration-300 group-hover:bg-black/30">
+                  <FiExternalLink className="h-6 w-6 scale-75 opacity-0 text-white transition-all duration-300 group-hover:scale-100 group-hover:opacity-100" />
+                </div>
+              </a>
             ))}
           </div>
         </Card>
