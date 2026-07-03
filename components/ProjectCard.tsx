@@ -12,13 +12,14 @@ export default function ProjectCard({
   project,
   featured = false,
 }: ProjectCardProps) {
-  const hasScreenshots = featured && project.screenshotImages?.length > 0;
+  const hasScreenshots =
+    featured && (project.screenshotImages?.length ?? 0) > 0;
 
   if (hasScreenshots) {
     return (
       <div className="space-y-6">
-        <Card className="p-6 sm:p-8">
-          <div className="flex flex-col gap-3">
+        <Card className="h-full p-6 sm:p-8">
+          <div className="flex flex-col gap-6">
             <div className="flex items-center justify-between gap-3">
               <span className="text-sm font-medium tabular-nums text-neon-magenta">
                 Final Project

@@ -24,7 +24,7 @@ export default function Card({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.5 } as never}
       whileHover={interactive ? { y: -4, boxShadow: "0 0 40px rgba(0, 217, 255, 0.3)" } : undefined}
     >
       {children}

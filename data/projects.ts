@@ -16,11 +16,11 @@ export const projects: Project[] = [
     id: "archivum",
     title: "Archivum",
     description:
-      "A research project management platform that centralizes student-adviser collaboration, project lifecycle tracking, and defense scheduling.",
+      "A comprehensive research project management platform that streamlines collaboration between students and advisers throughout the entire research lifecycle. The system centralizes project tracking, defense scheduling, document management, contextual commenting, and review requests while providing integrated tools such as AI-powered meeting transcription, RRL cross-referencing, rubric-based evaluations, notifications, and an academic event calendar.",
     problem:
-      "Academic institutions lacked a single place to manage project milestones, advisor reviews, and defense logistics.",
+      "Research projects are often coordinated across multiple platforms, resulting in scattered documents, fragmented feedback, manual scheduling, and limited visibility into project progress for both students and advisers.",
     solution:
-      "Built a centralized portal with progress dashboards, version history, team communication, and defense planning tools.",
+      "Developed a centralized web platform that unifies research management into a single workflow, enabling structured collaboration through contextual commenting and review requests, milestone tracking, automated scheduling, and integrated academic tools that reduce administrative overhead and improve project transparency.",
     techStack: ["Next.js", "TypeScript", "Express.js", "MySQL", "Tailwind CSS", "FastAPI", "Python", "Docker", "DigitalOcean"],
     link: "https://archivum-portal.duckdns.org/",
     featured: true,

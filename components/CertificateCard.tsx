@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";;
 import { FiExternalLink } from "react-icons/fi";
 import type { Certificate } from "@/data/certificates";
 import Card from "@/components/ui/Card";
@@ -20,7 +20,7 @@ export default function CertificateCard({ certificate }: CertificateCardProps) {
     <motion.div
       className="h-full"
       whileHover={{ scale: 1.02 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.3 } as never} 
     >
       <Card
         interactive
@@ -31,7 +31,7 @@ export default function CertificateCard({ certificate }: CertificateCardProps) {
           role="img"
           aria-label={`${title} certificate image placeholder`}
           whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.4 } as never}
         >
           {imageUrl ? (
             // eslint-disable-next-line @next/next/no-img-element
@@ -47,7 +47,7 @@ export default function CertificateCard({ certificate }: CertificateCardProps) {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5 } as never}
           >
             {title}
           </motion.h3>
@@ -56,7 +56,7 @@ export default function CertificateCard({ certificate }: CertificateCardProps) {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.1 } as never}
           >
             {issuer}
           </motion.p>
@@ -65,7 +65,7 @@ export default function CertificateCard({ certificate }: CertificateCardProps) {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.2 } as never}
           >
             {date}
           </motion.p>
@@ -77,7 +77,7 @@ export default function CertificateCard({ certificate }: CertificateCardProps) {
               rel="noopener noreferrer"
               className="mt-4 inline-flex w-fit items-center gap-1.5 text-sm font-bold text-neon-magenta transition-all duration-200 hover:text-neon-green hover:gap-2 uppercase tracking-wider"
               whileHover={{ x: 4 }}
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0.2 } as never}
             >
               View certificate
               <FiExternalLink className="h-3.5 w-3.5" aria-hidden="true" />

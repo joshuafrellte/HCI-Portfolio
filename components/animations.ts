@@ -13,7 +13,7 @@ export const fadeUpVariants: Variants = {
     y: 0,
     transition: {
       duration: 0.6,
-    },
+    } as never,
   },
 };
 
@@ -26,7 +26,7 @@ export const fadeInVariants: Variants = {
     opacity: 1,
     transition: {
       duration: 0.6,
-    },
+    } as never,
   },
 };
 
@@ -38,7 +38,7 @@ export const staggerContainerVariants: Variants = {
     transition: {
       staggerChildren: 0.1,
       delayChildren: 0.2,
-    },
+    } as never,
   },
 };
 
@@ -53,7 +53,7 @@ export const staggerItemVariants: Variants = {
     y: 0,
     transition: {
       duration: 0.5,
-    },
+    } as never,
   },
 };
 
@@ -67,7 +67,7 @@ export const textRevealVariants: Variants = {
     transition: {
       staggerChildren: 0.05,
       delayChildren: 0.1,
-    },
+    } as never,
   },
 };
 
@@ -81,7 +81,7 @@ export const charVariants: Variants = {
     y: 0,
     transition: {
       duration: 0.4,
-    },
+    } as never,
   },
 };
 
@@ -98,7 +98,7 @@ export const cardHoverVariants: Variants = {
     boxShadow: "0 0 40px rgba(0, 217, 255, 0.3)",
     transition: {
       duration: 0.3,
-    },
+    } as never,
   },
 };
 
@@ -111,7 +111,7 @@ export const imageScaleVariants: Variants = {
     scale: 1.05,
     transition: {
       duration: 0.4,
-    },
+    } as never,
   },
 };
 
@@ -126,7 +126,7 @@ export const underlineVariants: Variants = {
     scaleX: 1,
     transition: {
       duration: 0.3,
-    },
+    } as never,
   },
 };
 
@@ -143,7 +143,7 @@ export const slideInLeftVariants: Variants = {
     x: 0,
     transition: {
       duration: 0.6,
-    },
+    } as never,
   },
 };
 
@@ -158,7 +158,7 @@ export const slideInRightVariants: Variants = {
     x: 0,
     transition: {
       duration: 0.6,
-    },
+    } as never,
   },
 };
 
@@ -173,6 +173,6 @@ export const scaleInVariants: Variants = {
     scale: 1,
     transition: {
       duration: 0.5,
-    },
+    } as never,
   },
 };

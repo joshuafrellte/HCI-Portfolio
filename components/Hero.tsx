@@ -1,32 +1,31 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, type Variants } from "framer-motion";;
 import { FiArrowDown } from "react-icons/fi";
-import { highlights } from "@/data/highlights";
 import { AiOutlineMail } from "react-icons/ai";
 import { LuTerminal } from "react-icons/lu";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
       delayChildren: 0.2,
-    },
+    } as never,
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.6,
-    },
+    } as never,
   },
 };
 
@@ -35,7 +34,7 @@ export default function Hero() {
     <section
       id="hero"
       aria-labelledby="hero-heading"
-      className="section-padding-hero section-container mt-12 flex min-h-[88vh] flex-col justify-center"
+      className="section-padding-hero section-container mt-24 flex min-h-[88vh] flex-col justify-center"
     >
       <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-16">
         <motion.div
@@ -48,7 +47,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-sm font-bold uppercase tracking-widest text-neon-magenta"
           >
-            Yo Choom! Name's_
+            Yo Choom! Name&apos;s_
           </motion.p>
           <motion.h1
             id="hero-heading"
@@ -74,20 +73,20 @@ export default function Hero() {
             variants={itemVariants}
             className="mt-4 max-w-lg text-base leading-relaxed text-neutral-200"
           >
-            Technology shapes people as much as people shape technology. I'm interested in building software that understands both.
+            Technology shapes people as much as people shape technology. I&apos;m interested in building software that understands both.
           </motion.p>
 
           <motion.div
             variants={itemVariants}
             className="mt-8 flex flex-wrap gap-3"
           >
-            <Button href="#projects" variant="neon-cyan" size="md" className="flex gap-3">
+            <Button href="#projects" variant="neon-cyan" size="md" className="flex gap-3 w-[210px]">
               <LuTerminal />
               View projects
             </Button>
-            <Button href="#contact" variant="neon-magenta" size="md" className="flex gap-3">
+            <Button href="#contact" variant="neon-magenta" size="md" className="flex gap-3 w-[210px]">
               <AiOutlineMail />
-              Got a gig for me?
+              Got a gig?
             </Button>
           </motion.div>
         </motion.div>
@@ -97,7 +96,7 @@ export default function Hero() {
           variants={itemVariants}
           initial="hidden"
           animate="visible"
-          transition={{ delay: 0.3, duration: 0.6 }}
+          transition={{ delay: 0.3, duration: 0.6 } as never}
         >
           <motion.svg
             className="pointer-events-none absolute -z-10 h-[460px] w-[460px] sm:h-[520px] sm:w-[520px]"
@@ -105,7 +104,7 @@ export default function Hero() {
             aria-hidden="true"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
+            transition={{ delay: 0.6, duration: 0.8 } as never}
           >
             <g fill="none" strokeWidth="1.5">
               {[
@@ -145,7 +144,7 @@ export default function Hero() {
                   transition={{
                     pathLength: { delay: 0.7 + i * 0.05, duration: 1.1, ease: "easeOut" },
                     opacity: { delay: 0.7 + i * 0.05, duration: 3, repeat: Infinity, ease: "easeInOut" },
-                  }}
+                  } as never}
                 />
               ))}
               {[
@@ -164,7 +163,7 @@ export default function Hero() {
                   transition={{
                     scale: { delay: 1.4 + i * 0.05, duration: 0.4 },
                     opacity: { delay: 1.4 + i * 0.05, duration: 2.5, repeat: Infinity, ease: "easeInOut" },
-                  }}
+                  } as never}
                 />
               ))}
             </g>
@@ -187,6 +186,7 @@ export default function Hero() {
               className="object-cover"
               style={{ mixBlendMode: "screen", filter: "brightness(0.9) saturate(1.3) hue-rotate(160deg)", transform: "translate(-24px, 8px)" }}
               aria-hidden="true"
+              loading="eager"
             />
             <Image
               src="/profilepicforportfolio-removebg-preview.png"
@@ -194,6 +194,7 @@ export default function Hero() {
               fill
               sizes="384px"
               className="object-cover opacity-100"
+              loading="eager"
             />
             <Image
               src="/profilepicforportfolio-removebg-preview.png"
@@ -203,6 +204,7 @@ export default function Hero() {
               className="object-cover"
               style={{ mixBlendMode: "screen", filter: "brightness(0.4) saturate(2.5) hue-rotate(-20deg)", transform: "translate(24px, -8px)" }}
               aria-hidden="true"
+              loading="eager"
             />
           </div>
         </motion.div>
@@ -230,7 +232,7 @@ export default function Hero() {
         className="mt-16 inline-flex items-center gap-2 self-center text-sm font-bold text-neon-cyan transition-all duration-200 hover:text-neon-magenta uppercase tracking-widest lg:mt-32"
         aria-label="Scroll to Projects section"
         animate={{ y: [0, 6, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
+        transition={{ duration: 2, repeat: Infinity } as never}
         whileHover={{ scale: 1.1 }}
       >
         <FiArrowDown className="h-4 w-4" aria-hidden="true" />

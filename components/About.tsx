@@ -1,34 +1,36 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, type Variants } from "framer-motion";;
 import Card from "@/components/ui/Card";
 import SectionHeader from "@/components/ui/SectionHeader";
 
 const facts = [
-  { label: "School", value: "Mapúa Malayan Colleges Mindanao" },
-  { label: "Year Level", value: "2nd Year" },
-  { label: "Focus Area", value: "Full Stack Web Development" },
+  { label: "Status", value: "Available for projects" },
+  { label: "Role", value: "Full Stack Dev" },
+  { label: "Location", value: "Davao, Philippines" },
+  { label: "Currently", value: "Sharpening backend skills" },
+  { label: "Focus", value: "Next.js • Express.js • UI/UX Design" },
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
       delayChildren: 0.2,
-    },
+    } as never,
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.6,
-    },
+    } as never,
   },
 };
 
@@ -47,7 +49,7 @@ export default function About() {
       />
 
       <motion.div
-        className="h-full mt-12 grid gap-6 lg:grid-cols-[1fr_280px] lg:gap-8"
+        className="h-full mt-12 grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-8"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -90,7 +92,7 @@ export default function About() {
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4 }}
+                  transition={{ duration: 0.4 } as never}
                 >
                   <dt className="text-sm text-neutral-300">{label}</dt>
                   <dd className="mt-0.5 font-bold text-neon-cyan">

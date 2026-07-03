@@ -70,7 +70,7 @@ export default function Button({
     return (
       <motion.a
         href={href}
-        onClick={onClick as any}
+        onClick={onClick as never}
         className={baseClasses}
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}

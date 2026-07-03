@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";;
 
 interface SectionHeaderProps {
   id?: string;
@@ -23,7 +23,7 @@ export default function SectionHeader({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.6 } as never}
     >
       <div className="w-full">
         {index && (
@@ -32,7 +32,7 @@ export default function SectionHeader({
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.1 } as never}
           >
             {index}
           </motion.span>
@@ -45,19 +45,19 @@ export default function SectionHeader({
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={{ duration: 0.6, delay: 0.1 } as never}
         >
           {title}
         </motion.h2>
         {description && (
           <motion.p
-            className={`mt-4 max-w-2xl text-base ${
+            className={`mt-4 text-base ${
               light ? "text-neutral-200" : "text-neutral-200"
             }`}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.2 } as never}
           >
             {description}
           </motion.p>

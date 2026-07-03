@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, type Variants } from "framer-motion";;
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import Button from "@/components/ui/Button";
 
@@ -19,31 +19,31 @@ const contactLinks = [
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com",
-    display: "i dont have a linkedin account",
+    href: "https://www.linkedin.com/in/joshua-frell-te-70b343327/",
+    display: "linkedin.com/joshua-frell-te",
     icon: FiLinkedin,
   },
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
       delayChildren: 0.2,
-    },
+    } as never,
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.6,
-    },
+    } as never,
   },
 };
 
@@ -58,7 +58,7 @@ export default function Footer() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.6 } as never}
       >
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -68,7 +68,7 @@ export default function Footer() {
               x: [0, 50, 0],
               y: [0, 30, 0],
             }}
-            transition={{ duration: 8, repeat: Infinity }}
+            transition={{ duration: 8, repeat: Infinity } as never}
           />
           <motion.div
             className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-neon-cyan/5 blur-3xl"
@@ -76,7 +76,7 @@ export default function Footer() {
               x: [0, -50, 0],
               y: [0, -30, 0],
             }}
-            transition={{ duration: 10, repeat: Infinity }}
+            transition={{ duration: 10, repeat: Infinity } as never}
           />
         </div>
 
@@ -93,7 +93,7 @@ export default function Footer() {
             className="font-serif text-4xl font-bold text-neon-cyan sm:text-5xl"
             style={{ textShadow: "0 0 10px rgba(0, 217, 255, 0.5), 0 0 20px rgba(0, 217, 255, 0.3)" }}
           >
-            Let's Connect
+            Let&apos;s Connect
           </motion.h2>
           <motion.p
             variants={itemVariants}
@@ -106,7 +106,7 @@ export default function Footer() {
             className="mx-auto mt-4 max-w-xl text-base text-neutral-200"
           >
             Whether you have a project in mind or want to full-stack web development, software
-            design, or academic work, I'd like to hear from you.
+            design, or academic work, I&apos;d like to hear from you.
           </motion.p>
           <motion.div
             variants={itemVariants}
@@ -116,7 +116,7 @@ export default function Footer() {
               Send an email
             </Button>
             <Button
-              href="https://www.linkedin.com"
+              href="www.linkedin.com/in/joshua-frell-te-70b343327/"
               variant="neon-cyan"
               size="md"
             >
@@ -132,7 +132,7 @@ export default function Footer() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.6 } as never}
       >
         <div className="mx-auto max-w-7xl">
           <motion.ul
@@ -157,7 +157,7 @@ export default function Footer() {
                 >
                   <motion.div
                     whileHover={{ scale: 1.2, rotate: 10 }}
-                    transition={{ duration: 0.2 }}
+                    transition={{ duration: 0.2 } as never}
                   >
                     <Icon
                       className="mt-0.5 h-4 w-4 shrink-0 text-neon-magenta group-hover:text-neon-cyan"
@@ -182,7 +182,7 @@ export default function Footer() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.3 } as never}
           >
             © {new Date().getFullYear()} Joshua Frell Te. Cyberpunk e-portfolio
             powered by Framer Motion, Embla, and neon dreams.

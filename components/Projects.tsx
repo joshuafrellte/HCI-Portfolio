@@ -1,13 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import { FiChevronDown } from 'react-icons/fi';
 import { projects } from "@/data/projects";
 import ProjectCard from "./ProjectCard";
 import SectionHeader from "@/components/ui/SectionHeader";
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -18,7 +18,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -43,7 +43,7 @@ export default function Projects() {
     <section
       id="projects"
       aria-labelledby="projects-heading"
-      className="section-padding section-container"
+      className="mt-4 section-padding section-container"
     >
       <SectionHeader
         id="projects-heading"
@@ -90,7 +90,7 @@ export default function Projects() {
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                  transition={{ duration: 0.4, ease: "easeInOut" } as never}
                   className="overflow-hidden"
                 >
                   <div className="grid gap-4 pt-4 sm:grid-cols-2 sm:gap-6 sm:pt-6 lg:grid-cols-3 xl:grid-cols-4">
@@ -114,7 +114,7 @@ export default function Projects() {
                 {expanded ? "Show less" : "More projects"}
                 <motion.span
                   animate={{ rotate: expanded ? 180 : 0 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.3 } as never}
                   className="inline-flex"
                 >
                   <FiChevronDown className="h-4 w-4" aria-hidden="true" />

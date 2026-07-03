@@ -1,29 +1,29 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, type Variants } from "framer-motion";;
 import { skillCategories } from "@/data/skills";
 import Card from "@/components/ui/Card";
 import SectionHeader from "@/components/ui/SectionHeader";
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
       delayChildren: 0.2,
-    },
+    } as never,
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.5,
-    },
+    } as never,
   },
 };
 
@@ -48,39 +48,37 @@ export default function Skills() {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
-        {skillCategories.map(({ name, skills }, index) => (
+        {skillCategories.map(({ name, icon: Icon, skills }) => (
           <motion.div key={name} variants={itemVariants}>
             <Card className="h-full p-4 sm:p-6 border-neon-magenta/50 hover:border-neon-green/70">
-              <motion.span
-                className="text-sm font-bold uppercase tracking-widest text-neon-magenta tabular-nums"
-                aria-hidden="true"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                {String(index + 1).padStart(2, "0")}
-              </motion.span>
-              <motion.h3
-                className="mt-3 font-serif text-xl font-bold text-neon-cyan"
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 + 0.1 }}
-              >
-                {name}
-              </motion.h3>
+              <div className="flex items-center gap-3">
+                <Icon
+                  size={22}
+                  className="text-neon-magenta"
+                />
+
+                <motion.h3
+                  className="font-serif text-xl font-bold text-neon-cyan"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 } as never}
+                >
+                  {name}
+                </motion.h3>
+              </div>
               <motion.ul
                 className="mt-4 flex flex-wrap gap-2"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
+                transition={{ duration: 0.5, delay: 0.2 } as never}
               >
-                {skills.map((skill) => (
-                  <li key={skill}>
-                    <span className="archivum-chip text-xs hover:border-neon-magenta/100 cursor-pointer transition-colors">
-                      {skill}
+                {skills.map(({ name, icon: SkillIcon }) => (
+                  <li key={name}>
+                    <span className="flex border border-neon-cyan bg-[#1a0933] px-2.5 py-1 text-sm font-medium text-neon-cyan items-center gap-2">
+                      {SkillIcon && <SkillIcon size={13} />}
+                      {name}
                     </span>
                   </li>
                 ))}

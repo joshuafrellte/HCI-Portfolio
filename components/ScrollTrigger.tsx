@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion, Variants } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { useReducedMotion } from './useReducedMotion';
 
 interface ScrollTriggerProps {
@@ -32,7 +32,7 @@ export function ScrollTrigger({
       whileInView={prefersReduced ? 'visible' : 'visible'}
       variants={variants}
       viewport={{ once, margin: '-100px' }}
-      transition={{ delay: prefersReduced ? 0 : delay }}
+      transition={{ delay: prefersReduced ? 0 : delay } as never}
     >
       {children}
     </motion.div>
@@ -55,25 +55,25 @@ export function StaggeredGrid({
 }: StaggeredGridProps) {
   const prefersReduced = useReducedMotion();
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: prefersReduced ? 0 : staggerDelay,
         delayChildren: prefersReduced ? 0 : 0.2,
-      },
+      } as never,
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: prefersReduced ? 0 : 0.5,
-      },
+      } as never,
     },
   };
 
@@ -96,59 +96,59 @@ export function StaggeredGrid({
   );
 }
 
-interface AnimatedTextProps {
-  text: string;
-  className?: string;
-  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
-  delay?: number;
-}
+// interface AnimatedTextProps {
+//   text: string;
+//   className?: string;
+//   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
+//   delay?: number;
+// }
 
 /**
  * AnimatedText component - splits text into characters and animates them
  */
-export function AnimatedText({
-  text,
-  className = '',
-  as: Component = 'h1',
-  delay = 0,
-}: AnimatedTextProps) {
-  const prefersReduced = useReducedMotion();
+// export function AnimatedText({
+//   text,
+//   className = '',
+//   as: Component = 'h1',
+//   delay = 0,
+// }: AnimatedTextProps) {
+//   const prefersReduced = useReducedMotion();
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: prefersReduced ? 0 : 0.05,
-        delayChildren: prefersReduced ? 0 : delay,
-      },
-    },
-  };
+//   const containerVariants: Variants = {
+//     hidden: { opacity: 0 },
+//     visible: {
+//       opacity: 1,
+//       transition: {
+//         staggerChildren: prefersReduced ? 0 : 0.05,
+//         delayChildren: prefersReduced ? 0 : delay,
+//       } as never,
+//     },
+//   };
 
-  const charVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: prefersReduced ? 0 : 0.4 },
-    },
-  };
+//   const charVariants: Variants = {
+//     hidden: { opacity: 0, y: 20 },
+//     visible: {
+//       opacity: 1,
+//       y: 0,
+//       transition: { duration: prefersReduced ? 0 : 0.4 },
+//     } as never,
+//   };
 
-  const AnimatedComponent = motion[Component as keyof typeof motion] as any;
+//   const AnimatedComponent = motion[Component as keyof typeof motion] as never;
 
-  return (
-    <AnimatedComponent
-      className={className}
-      initial="hidden"
-      whileInView="visible"
-      variants={containerVariants}
-      viewport={{ once: true, margin: '-100px' }}
-    >
-      {text.split('').map((char, index) => (
-        <motion.span key={index} variants={charVariants}>
-          {char}
-        </motion.span>
-      ))}
-    </AnimatedComponent>
-  );
-}
+//   return (
+//     <AnimatedComponent
+//       className={className}
+//       initial="hidden"
+//       whileInView="visible"
+//       variants={containerVariants}
+//       viewport={{ once: true, margin: '-100px' }}
+//     >
+//       {text.split('').map((char, index) => (
+//         <motion.span key={index} variants={charVariants}>
+//           {char}
+//         </motion.span>
+//       ))}
+//     </AnimatedComponent>
+//   );
+// }

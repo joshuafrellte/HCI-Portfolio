@@ -1,14 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import { FiChevronDown } from 'react-icons/fi';
 
 import { certificates } from "@/data/certificates";
 import CertificateCard from "./CertificateCard";
 import SectionHeader from "@/components/ui/SectionHeader";
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -19,7 +19,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -85,7 +85,7 @@ export default function Certificates() {
                   delay: 0.1,
                 },
               },
-            }}
+            } as never}
             exit={{
               height: 0,
               opacity: 0,
@@ -93,7 +93,7 @@ export default function Certificates() {
                 opacity: { duration: 0.15 },
                 height: { duration: 0.3 },
               },
-            }}
+            } as never}
             className="overflow-hidden"
           >
             <motion.div
@@ -127,7 +127,7 @@ export default function Certificates() {
           {expanded ? "Show Less" : "Show More"}
           <motion.span
             animate={{ rotate: expanded ? 180 : 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.3 } as never}
             className="inline-flex"
           >
             <FiChevronDown className="h-4 w-4" aria-hidden="true" />
